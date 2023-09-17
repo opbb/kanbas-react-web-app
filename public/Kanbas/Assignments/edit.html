@@ -100,6 +100,50 @@
             </div>
             <br/>
             <div>
+                <label for="submissionAttempts">Submission Attempts</label><br/>
+                <select id="submissionAttempts">
+                    <option selected value="unlimited">Unlimited</option>
+                </select>
+            </div>
+            <br/>
+            <div>
+                <label for="plagarismReview">Plagarism Review</label><br/>
+                <select id="plagarismReview">
+                    <option selected value="eone">None</option>
+                </select>
+            </div>
+            <br/>
+            <div>
+                <label for="chkbox-group-assignment">Group Assignment</label><br/>
+                <input type="checkbox" value="isGroupAssignment" 
+                name="group-assignment" id="chkbox-group-assignment"/>
+                <label for="chkbox-group-assignment">This is a group assignment</label><br/>
+            </div>
+            <br/>
+            <div>
+                <label for="chkbox-peer-review">Peer Reviews</label><br/>
+                <input type="checkbox" value="requiresPeerReviews" 
+                name="peer-reviews" id="chkbox-peer-review"/>
+                <label for="chkbox-peer-review">Requires Peer Reviews</label><br/>
+            </div>
+            <br/>
+            <div>
+                <label>Assign</label><br/>
+                <label for="assign-to">Assign to</label><br/>
+                <input type="text" value="Everyone" 
+                name="assign-to" id="assign-to"/><br/><br/>
+                <label for="due-date">Due</label><br/>
+                <input type="date" value="2021-01-01" 
+                name="due-date" id="due-date"/><br/><br/>
+                <label for="available-date">Due</label><br/>
+                <input type="date" value="2021-01-01" 
+                name="available-date" id="available-date"/><br/><br/>
+                <label for="until-date">Due</label><br/>
+                <input type="date" value="2021-01-01" 
+                name="until-date" id="until-date"/>
+            </div>
+            <br/>
+            <div>
                 <a href="/kanbas/assignments"><button>Cancel</button></a>
                 <a href="/kanbas/assignments"><button>Save</button></a>
             </div>
