@@ -1,0 +1,61 @@
+.wd-width-85px {
+    width: 85px;
+}
+
+.wd-child-height-60px > * {
+    height: 60px;
+}
+
+.wd-anchor-padding-5px a {
+    padding: 5px;
+}
+
+.wd-icon-padding-5px i {
+    padding: 5px;
+}
+
+.wd-child-font-size-small > * {
+    font-size: small;
+}
+
+.wd-child-word-break > * {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.wd-test-child-bkg-color > * {
+    background-color: blueviolet;
+}
+
+.wd-icon-color-red i {
+    color: #dc3545;
+}
+
+.wd-icon-color-gray i {
+    color: gray;
+}
+
+
+.wd-icons-max-width-height-40px i {
+    width: 40px;
+    height: 40px;
+}
+
+.wd-anchor-text-light a {
+    color: whitesmoke
+}
+
+.wd-text-red {
+    color:  #dc3545;
+}
+
+.wd-northeastern-n {
+    color:  #dc3545;
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+.wd-flex-grow-1 {
+    flex-grow: 1;
+}
