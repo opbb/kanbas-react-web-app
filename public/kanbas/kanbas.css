@@ -2,6 +2,10 @@
     color:  #dc3545;
 }
 
+.wd-black-anchors a {
+    color:  black;
+}
+
 .wd-p-5px-anchors a {
     padding: 5px;
 }
@@ -12,4 +16,8 @@
 
 .wd-no-underline-anchors a {
     text-decoration: none;
+}
+
+.wd-main-wrapper {
+    min-height: 100vh;
 }
