@@ -1,0 +1,16 @@
+.wd-sidebar-fixed-width {
+    width: 230px;
+}
+
+.wd-wordbreak-anchors a {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.wd-course-info-fixed-width {
+    width: 250px;
+}
+
+.wd-child-padding-20px > * {
+    padding: 15px;
+}
