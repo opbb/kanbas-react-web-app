@@ -1,0 +1,55 @@
+.wd-red-anchors a {
+    color:  #dc3545;
+}
+
+.wd-black-anchors a {
+    color:  black;
+}
+
+.wd-p-5px-anchors a {
+    padding: 5px;
+}
+
+.wd-child-margin-5px > * {
+    margin: 5px;
+}
+
+.wd-no-underline-anchors a {
+    text-decoration: none;
+}
+
+.wd-main-wrapper {
+    min-height: 100vh;
+}
+
+.wd-red-anchors a {
+    color:  #dc3545;
+}
+
+.wd-black-anchors a {
+    color:  black;
+}
+
+.wd-p-5px-anchors a {
+    padding: 5px;
+}
+
+.wd-child-margin-5px > * {
+    margin: 5px;
+}
+
+.wd-no-underline-anchors a {
+    text-decoration: none;
+}
+
+.wd-min-full-page-height{
+    min-height: 100vh;
+}
+
+.wd-flex-grow {
+    flex-grow: 1;
+}
+
+.wd-test-bkg {
+    background-color: blueviolet;
+}

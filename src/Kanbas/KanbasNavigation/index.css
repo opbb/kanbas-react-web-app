@@ -1,0 +1,43 @@
+.kanbas-navigation-bar {
+    width: 85px;
+    background-color: black;
+}
+
+.kanbas-navigation-bar-block {
+    height: 65px;
+    background-color: transparent;
+    border: 0px;
+    padding: 0px;
+}
+
+.kanbas-navigation-bar-anchor {
+    font-size: small;
+    color: white;
+    text-decoration: none;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.kanbas-navigation-bar-icon {
+    padding: 5px;
+    color: #dc3545;
+}
+
+.kanbas-navigation-bar-account-icon {
+    color: gray;
+}
+
+.northeastern-n {
+    height: 85px;
+    line-height: 70px;
+    vertical-align: middle;
+    color: #dc3545;
+    font-size: 76px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+.selected {
+    background-color: white;
+    color: #dc3545;
+}
