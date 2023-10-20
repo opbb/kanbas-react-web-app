@@ -1,19 +1,21 @@
 import { Link, useParams, useLocation } from "react-router-dom";
-
+import "./index.css";
 
 function CourseNavigation() {
   const links = ["Home", "Modules", "Assignments", "Grades"];
   const { courseId } = useParams();
   const { pathname } = useLocation();
   return (
-    <div className="list-group" style={{ width: 150 }}>
+    <div className="d-flex flex-column course-nav-sidebar">
       {links.map((link, index) => (
-        <Link
-          key={index}
-          to={`/Kanbas/Courses/${courseId}/${link}`}
-          className={`list-group-item ${pathname.includes(link) && "active"}`}>
-          {link}
+        <span class={`p-1 ${pathname.includes(link) && "border-start border-dark border-2"}`}>
+          <Link
+            key={index}
+            to={`/Kanbas/Courses/${courseId}/${link}`}
+            className={`course-nav-link ${pathname.includes(link) && "course-nav-link-active"}`}>
+            {link}
         </Link>
+        </span>
       ))}
     </div>
   );

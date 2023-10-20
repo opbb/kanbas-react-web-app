@@ -1,7 +1,19 @@
-.dashboard-card {
+.dashboard-card-fixed {
     width: 260px;
-    height: 200px;
+    height: 250px;
     margin: 15px;
+}
+
+.dashboard-card-stretch {
+    flex-grow: 1;
+    margin: 15px;
+}
+
+.dashboard-card-top {
     border-top-width: 130px;
     border-top-color: rgb(32, 80, 193);
+}
+
+.dashboard-card-date {
+    font-size: x-small;
 }

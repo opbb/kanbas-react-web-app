@@ -1,0 +1,21 @@
+.course-nav-sidebar {
+    width: 200px;
+}
+
+.course-nav-link {
+    background-color: transparent;
+    color: #dc3545;
+    text-decoration: none;
+    text-decoration-color: #dc3545;
+}
+
+.course-nav-link:hover {
+    text-decoration: underline;
+}
+
+.course-nav-link-active {
+    background-color: transparent;
+    color: black;
+    text-decoration-color: black;
+    border-left-color: black;
+}
