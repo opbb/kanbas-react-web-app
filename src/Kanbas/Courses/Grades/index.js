@@ -6,7 +6,8 @@ function Grades() {
   const enrollments = db.enrollments.filter((enrollment) => enrollment.course === courseId);
   return (
     <div>
-      <h1>Grades</h1>
+      <h1>Gradebook</h1>
+      <hr />
       <div className="table-responsive">
         <table className="table">
           <thead>

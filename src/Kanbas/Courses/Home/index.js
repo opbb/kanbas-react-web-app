@@ -15,6 +15,8 @@ function Home() {
         <button type="button" class="btn btn-secondary">New Announcement</button>
         <button type="button" class="btn btn-secondary">New Analytics</button>
         <button type="button" class="btn btn-secondary">View Course Notifications</button>
+        <h5 class="mt-4 mb-0">To Do</h5>
+        <hr class="mt-1" />
       </div>
     </div>
   );
