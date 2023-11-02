@@ -1,21 +1,57 @@
 import { Link } from "react-router-dom";
-import db from "../Database";
+import { React } from "react";
 import "./index.css";
-function Dashboard() {
-  const courses = db.courses;
+function Dashboard({ courses, course, setCourse, addNewCourse,
+  deleteCourse, updateCourse }) {
 
   function makeCards(areFixed) {
     return courses.map((course) => (
       <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} className="list-group-item">
         <div class={`card dashboard-card-top ${areFixed ? "dashboard-card-fixed" : "dashboard-card-stretch"}`}>
           <div class="card-body">
-          <h5 class="card-title text-truncate">{course.name}</h5>
-          <h6 class="card-subtitle text-muted mb-2 text-truncate">{course.number}</h6>
-          <h6 class="card-subtitle text-muted dashboard-card-text text-truncate dashboard-card-date">From {course.startDate} to {course.endDate}.</h6>
+            <h5 class="card-title text-truncate">{course.name}</h5>
+            <h6 class="card-subtitle text-muted mb-2 text-truncate">{course.number}</h6>
+            <h6 class="card-subtitle text-muted dashboard-card-text text-truncate dashboard-card-date">From {course.startDate} to {course.endDate}.</h6>
+            <div class="d-flex flex-row justify-content-between p-1">
+              <button class="btn btn-secondary m-1"
+                onClick={(event) => {
+                  event.preventDefault();
+                  setCourse(course);
+                }}>
+                Edit
+              </button>
+              <button class="btn btn-danger m-1"
+                onClick={(event) => {
+                  event.preventDefault();
+                  deleteCourse(course._id);
+                }}>
+                Delete
+              </button>
+            </div>
           </div>
         </div>
       </Link>
     ));
+  }
+
+  function makeAddCourse(wrapperClass) {
+    return (
+        <div class={wrapperClass}>
+          <input value={course.name} placeholder="Course Name" className="form-control m-1"
+                onChange={(e) => setCourse({ ...course, name: e.target.value }) } />
+          <input value={course.number} placeholder="Course Number" className="form-control m-1"
+                onChange={(e) => setCourse({ ...course, number: e.target.value }) } />
+          <input value={course.startDate} placeholder="Start Date" className="form-control m-1" type="date"
+                onChange={(e) => setCourse({ ...course, startDate: e.target.value }) }/>
+          <input value={course.endDate} placeholder="End Date" className="form-control m-1" type="date"
+                onChange={(e) => setCourse({ ...course, endDate: e.target.value }) } />
+          <button class="btn btn-danger m-1" onClick={addNewCourse} >
+            Add
+          </button>
+          <button class="btn btn-primary m-1" onClick={updateCourse} >
+            Update
+          </button>
+        </div>);
   }
 
   return (
@@ -23,6 +59,8 @@ function Dashboard() {
       <h1>Dashboard</h1>
       <hr />
       <h2>Published Courses ({courses.length})</h2>
+      { makeAddCourse("d-none d-md-flex flex-row") }
+      { makeAddCourse("d-flex d-md-none flex-column") }
       <div className="d-none d-md-flex flex-row flex-wrap">
         {makeCards(true)}
       </div>
