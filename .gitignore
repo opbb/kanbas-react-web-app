@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-/kanbas-react-web-app/node_modules
+#/kanbas-react-web-app/node_modules
 /.pnp
 .pnp.js
 .idea
