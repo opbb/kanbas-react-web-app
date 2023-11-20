@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "kanbas-node-server-app",
   "version": "1.0.0",
   "description": "A node server designed to server the kanbas-react-web-app.",
@@ -18,5 +19,6 @@
   "homepage": "https://github.com/opbb/kanbas-react-web-app#readme",
   "dependencies": {
     "express": "^4.18.2"
-  }
+  },
+  "start": "node app.js"
 }
