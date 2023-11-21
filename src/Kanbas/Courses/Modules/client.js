@@ -1,6 +1,8 @@
 import axios from "axios";
-const COURSES_URL = "http://localhost:4000/api/courses";
-const MODULES_URL = "http://localhost:4000/api/modules";
+const COURSES_URL =
+  "https://opbb-kanbas-node-server-app-bd067a0d8658.herokuapp.com/api/courses";
+const MODULES_URL =
+  "https://opbb-kanbas-node-server-app-bd067a0d8658.herokuapp.com/api/modules";
 export const deleteModule = async (moduleId) => {
   const response = await axios.delete(`${MODULES_URL}/${moduleId}`);
   return response.data;
