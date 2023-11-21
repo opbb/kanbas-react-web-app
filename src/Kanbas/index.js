@@ -16,7 +16,8 @@ import axios from "axios";
 
 function Kanbas() {
   const [courses, setCourses] = useState([]);
-  const URL = "http://localhost:4000/api/courses";
+  const URL =
+    "https://opbb-kanbas-node-server-app-bd067a0d8658.herokuapp.com/api/courses";
   const findAllCourses = async () => {
     const response = await axios.get(URL);
     setCourses(response.data);

@@ -10,7 +10,8 @@ import Grades from "./Grades";
 
 function Courses() {
   const { courseId } = useParams();
-  const URL = "http://localhost:4000/api/courses";
+  const URL =
+    "https://opbb-kanbas-node-server-app-bd067a0d8658.herokuapp.com/api/courses";
   const [course, setCourse] = useState({});
   const findCourseById = async (courseId) => {
     const response = await axios.get(`${URL}/${courseId}`);

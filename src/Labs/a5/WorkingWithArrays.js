@@ -8,7 +8,8 @@ function WorkingWithArrays() {
     due: "2021-09-09",
     completed: false,
   });
-  const API = "http://localhost:4000/a5/todos";
+  const API =
+    "https://opbb-kanbas-node-server-app-bd067a0d8658.herokuapp.com/a5/todos";
   const [todos, setTodos] = useState([]);
   const postTodo = async () => {
     const response = await axios.post(API, todo);
