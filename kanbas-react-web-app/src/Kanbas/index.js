@@ -31,16 +31,16 @@ function Kanbas() {
     startDate: "2023-09-10",
     endDate: "2023-12-15",
   });
-  const addNewCourse = () => {
-    setCourses([
-      ...courses,
-      { ...course, _id: new Date().getTime().toString() },
-    ]);
+  const addCourse = async () => {
+    const response = await axios.post(URL, course);
+    setCourses([response.data, ...courses]);
   };
-  const deleteCourse = (courseId) => {
+  const deleteCourse = async (courseId) => {
+    const response = await axios.delete(`${URL}/${courseId}`);
     setCourses(courses.filter((course) => course._id !== courseId));
   };
-  const updateCourse = () => {
+  const updateCourse = async () => {
+    const response = await axios.put(`${URL}/${course._id}`, course);
     setCourses(
       courses.map((c) => {
         if (c._id === course._id) {
@@ -50,6 +50,7 @@ function Kanbas() {
         }
       })
     );
+    setCourse({ name: "" });
   };
 
   return (
@@ -66,7 +67,7 @@ function Kanbas() {
                 courses={courses}
                 course={course}
                 setCourse={setCourse}
-                addNewCourse={addNewCourse}
+                addNewCourse={addCourse}
                 deleteCourse={deleteCourse}
                 updateCourse={updateCourse}
               />
@@ -79,16 +80,13 @@ function Kanbas() {
                 courses={courses}
                 course={course}
                 setCourse={setCourse}
-                addNewCourse={addNewCourse}
+                addNewCourse={addCourse}
                 deleteCourse={deleteCourse}
                 updateCourse={updateCourse}
               />
             }
           />
-          <Route
-            path="Courses/:courseId/*"
-            element={<Courses courses={courses} />}
-          />
+          <Route path="Courses/:courseId/*" element={<Courses />} />
           <Route path="Calendar" element={<Calendar />} />
           <Route path="Commons" element={<Commons />} />
           <Route path="Help" element={<Help />} />

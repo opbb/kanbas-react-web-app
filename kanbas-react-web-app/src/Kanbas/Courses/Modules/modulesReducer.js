@@ -10,10 +10,10 @@ const modulesSlice = createSlice({
   initialState,
   reducers: {
     addModule: (state, action) => {
-      state.modules = [
-        { ...action.payload, _id: new Date().getTime().toString() },
-        ...state.modules,
-      ];
+      state.modules = [action.payload, ...state.modules];
+    },
+    setModules: (state, action) => {
+      state.modules = action.payload;
     },
     deleteModule: (state, action) => {
       state.modules = state.modules.filter(
@@ -35,6 +35,6 @@ const modulesSlice = createSlice({
   },
 });
 
-export const { addModule, deleteModule, updateModule, setModule } =
+export const { addModule, deleteModule, updateModule, setModule, setModules } =
   modulesSlice.actions;
 export default modulesSlice.reducer;
