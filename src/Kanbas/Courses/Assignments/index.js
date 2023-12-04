@@ -9,34 +9,34 @@ function Assignments() {
     (assignment) => assignment.course === courseId
   );
   return (
-    <div class="d-flex flex-column">
-      <div class="d-flex flex-row p-2 wd-flex-grow">
+    <div className="d-flex flex-column">
+      <div className="d-flex flex-row p-2 wd-flex-grow">
         <input
           type="text"
-          class="float-start"
+          className="float-start"
           placeholder="Search for Assignment"
           aria-label="Search"
           aria-describedby="basic-addon1"
         />
-        <span class="wd-flex-grow"></span>
-        <span class="float-end">
-          <button type="button" class="btn btn-secondary module-button">
+        <span className="wd-flex-grow"></span>
+        <span className="float-end">
+          <button type="button" className="btn btn-secondary module-button">
             + Group
           </button>
-          <button type="button" class="btn btn-danger module-button">
+          <button type="button" className="btn btn-danger module-button">
             + Assignment
           </button>
           <button
             type="button"
-            class="btn btn-secondary module-button module-options-button"
+            className="btn btn-secondary module-button module-options-button"
           >
             ...
           </button>
         </span>
       </div>
       <hr />
-      <div class="list-group rounded-0">
-        <h2 class="list-group-item assignments-header">Assignments</h2>
+      <div className="list-group rounded-0">
+        <h2 className="list-group-item assignments-header">Assignments</h2>
         <div className="list-group-item list-group list-group-flush">
           {courseAssignments.map((assignment) => (
             <Link

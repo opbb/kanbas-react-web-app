@@ -17,23 +17,23 @@ function sayHello() {
 }
 
 function Assignment4() {
- return (
-   <div class="p-3">
-     <h1>Assignment 4</h1>
-     <Add a={1} b={2} />
-     <ClickEvent />
-     <PassingDataOnEvent />
-     <PassingFunctions theFunction={sayHello} />
-     <EventObject />
-     <Counter />
-     <BooleanStateVariables />
-     <StringStateVariables />
-     <DateStateVariable />
-     <ObjectStateVariable />
-     <ArrayStateVariable />
-     <ParentStateComponent />
-     <ReduxExamples />
-   </div>
- );
+  return (
+    <div className="p-3">
+      <h1>Assignment 4</h1>
+      <Add a={1} b={2} />
+      <ClickEvent />
+      <PassingDataOnEvent />
+      <PassingFunctions theFunction={sayHello} />
+      <EventObject />
+      <Counter />
+      <BooleanStateVariables />
+      <StringStateVariables />
+      <DateStateVariable />
+      <ObjectStateVariable />
+      <ArrayStateVariable />
+      <ParentStateComponent />
+      <ReduxExamples />
+    </div>
+  );
 }
 export default Assignment4;

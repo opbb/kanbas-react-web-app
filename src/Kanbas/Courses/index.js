@@ -29,7 +29,7 @@ function Courses() {
       <hr />
       <div className="d-flex flex-row">
         <CourseNavigation />
-        <div class="wd-flex-grow">
+        <div className="wd-flex-grow">
           <Routes>
             <Route path="/*" element={<Navigate to="Home" />} />
             <Route path="Home" element={<Home />} />

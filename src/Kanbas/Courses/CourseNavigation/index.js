@@ -8,18 +8,24 @@ function CourseNavigation() {
   return (
     <div className="d-flex flex-column course-nav-sidebar">
       {links.map((link, index) => (
-        <span class={`p-1 ${pathname.includes(link) && "border-start border-dark border-2"}`}>
+        <span
+          className={`p-1 ${
+            pathname.includes(link) && "border-start border-dark border-2"
+          }`}
+        >
           <Link
             key={index}
             to={`/Kanbas/Courses/${courseId}/${link}`}
-            className={`course-nav-link ${pathname.includes(link) && "course-nav-link-active"}`}>
+            className={`course-nav-link ${
+              pathname.includes(link) && "course-nav-link-active"
+            }`}
+          >
             {link}
-        </Link>
+          </Link>
         </span>
       ))}
     </div>
   );
 }
-
 
 export default CourseNavigation;

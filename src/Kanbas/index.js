@@ -9,6 +9,7 @@ import Help from "./Help";
 import History from "./History";
 import Inbox from "./Inbox";
 import Studio from "./Studio";
+import Signin from "./Account/signin";
 import { useState, useEffect } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
@@ -94,6 +95,7 @@ function Kanbas() {
           <Route path="History" element={<History />} />
           <Route path="Inbox" element={<Inbox />} />
           <Route path="Studio" element={<Studio />} />
+          <Route path="/signin" element={<Signin />} />
         </Routes>
       </div>
     </Provider>
