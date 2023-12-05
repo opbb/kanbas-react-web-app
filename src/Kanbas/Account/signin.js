@@ -12,21 +12,27 @@ function Signin() {
     navigate("/Kanbas/Account");
   };
   return (
-    <div>
-      <h1>Signin</h1>
+    <div className="p-3">
+      <h1>Sign In</h1>
       <input
+        className="form-control"
+        placeholder="Username"
         value={credentials.username}
         onChange={(e) =>
           setCredentials({ ...credentials, username: e.target.value })
         }
       />
       <input
+        className="form-control"
+        placeholder="Password"
         value={credentials.password}
         onChange={(e) =>
           setCredentials({ ...credentials, password: e.target.value })
         }
       />
-      <button onClick={signin}> Signin </button>
+      <button className="btn btn-primary" onClick={signin}>
+        Sign In
+      </button>
     </div>
   );
 }

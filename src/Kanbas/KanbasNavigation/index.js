@@ -3,6 +3,8 @@ import "./index.css";
 function KanbasNavigation() {
   const links = [
     { linkName: "Account", iconName: "fa-user-circle" },
+    { linkName: "SignIn", iconName: "fa-sign-in" },
+    { linkName: "SignUp", iconName: "fa-sign-in" },
     { linkName: "Dashboard", iconName: "fa-tachometer-alt" },
     { linkName: "Courses", iconName: "fa-book" },
     { linkName: "Calendar", iconName: "fa-calendar" },
@@ -29,7 +31,9 @@ function KanbasNavigation() {
         >
           <i
             className={`fas ${link.iconName} fa-2x kanbas-navigation-bar-icon ${
-              link.linkName === "Account"
+              link.linkName === "Account" ||
+              link.linkName === "SignIn" ||
+              link.linkName === "SignUp"
                 ? "kanbas-navigation-bar-account-icon"
                 : ""
             }`}
